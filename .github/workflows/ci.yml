@@ -1,0 +1,15 @@
+# .github/workflows/on-discussion.yml
+name: Discussion Event Trigger
+
+on:
+  discussion:
+    types: [created]
+
+jobs:
+  handle-discussion:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Log Discussion Event
+        run: |
+          echo "hai from discussion event trigger"
