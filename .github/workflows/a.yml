@@ -1,0 +1,15 @@
+# .github/workflows/on-discussion-comment.yml
+name: Discussion Comment Event Trigger
+
+on:
+  discussion_comment:
+    types: [created]
+
+jobs:
+  handle-discussion-comment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Log Discussion Comment Event
+        run: |
+          echo "hai from discussion_comment"
